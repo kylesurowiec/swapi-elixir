@@ -22,7 +22,7 @@ defmodule Swapi.MixProject do
   defp deps do
     [
       {:tesla, "~> 1.0.0"},
-      {:jason, ">= 1.0.0"}
+      {:jason, ">= 1.1.2"}
     ]
   end
 end

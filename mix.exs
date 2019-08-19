@@ -26,7 +26,7 @@ defmodule Swapi.MixProject do
 
   defp package() do
     [
-      name: "swapi-elixir",
+      name: "swapi_elixir",
       files: ~w(lib .formatter.exs mix.exs README.md LICENSE),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/kylesurowiec/swapi-elixir"}

@@ -36,12 +36,12 @@ end
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `swapi` to your list of dependencies in `mix.exs`:
+by adding `swapi_elixir` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:swapi, "~> 0.1.0"}
+    {:swapi_elixir, "~> 1.0.0"}
   ]
 end
 ```

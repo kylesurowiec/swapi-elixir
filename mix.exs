@@ -4,7 +4,9 @@ defmodule Swapi.MixProject do
   def project do
     [
       app: :swapi,
-      version: "0.1.0",
+      description: description(),
+      package: package(),
+      version: "1.0.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -15,6 +17,19 @@ defmodule Swapi.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp description() do
+    "An API wrapper for https://swapi.co built with Elixir"
+  end
+
+  defp package() do
+    [
+      name: "swapi-elixir",
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/kylesurowiec/swapi-elixir"}
     ]
   end
 

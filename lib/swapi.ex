@@ -1,50 +1,50 @@
 defmodule Swapi do
   def get_person(id) do
-    Utils.one("/people/#{id}/")
+    Request.one("/people/#{id}/")
   end
 
   def get_all_people() do
-    Utils.all("/people/")
+    Request.all("/people/")
   end
 
   def get_film(id) do
-    Utils.one("/films/#{id}/")
+    Request.one("/films/#{id}/")
   end
 
   def get_all_films do
-    Utils.all("/films/")
+    Request.all("/films/")
   end
 
   def get_starship(id) do
-    Utils.one("/starships/#{id}/")
+    Request.one("/starships/#{id}/")
   end
 
   def get_all_starships do
-    Utils.all("/starships/")
+    Request.all("/starships/")
   end
 
   def get_vehicle(id) do
-    Utils.one("/vehicles/#{id}/")
+    Request.one("/vehicles/#{id}/")
   end
 
   def get_all_vehicles do
-    Utils.all("/vehicles/")
+    Request.all("/vehicles/")
   end
 
   def get_species(id) do
-    Utils.one("/species/#{id}/")
+    Request.one("/species/#{id}/")
   end
 
   def get_all_species do
-    Utils.all("/species/")
+    Request.all("/species/")
   end
 
   def get_planet(id) do
-    Utils.one("/planets/#{id}/")
+    Request.one("/planets/#{id}/")
   end
 
   # TODO: Recurse through all pages
   def get_all_planets do
-    Utils.all("/planets/")
+    Request.all("/planets/")
   end
 end

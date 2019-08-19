@@ -1,116 +1,50 @@
 defmodule Swapi do
-    def get_person(id) do
-        {status, res} = Request.fetch("/people/#{id}")    
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_person(id) do
+    Utils.one("/people/#{id}/")
+  end
 
-    # TODO: Recurse through all pages
-    def get_all_people do
-        {status, res} = Request.fetch("/people")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_all_people() do
+    Utils.all("/people/")
+  end
 
-    def get_film(id) do
-        {status, res} = Request.fetch("/films/#{id}")
+  def get_film(id) do
+    Utils.one("/films/#{id}/")
+  end
 
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_all_films do
+    Utils.all("/films/")
+  end
 
-    # TODO: Recurse through all pages
-    def get_all_films do
-        {status, res} = Request.fetch("/films")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_starship(id) do
+    Utils.one("/starships/#{id}/")
+  end
 
-    def get_starship(id) do
-        {status, res} = Request.fetch("/starships/#{id}")
+  def get_all_starships do
+    Utils.all("/starships/")
+  end
 
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_vehicle(id) do
+    Utils.one("/vehicles/#{id}/")
+  end
 
-    # TODO: Recurse through all pages
-    def get_all_starships do
-        {status, res} = Request.fetch("/starships")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_all_vehicles do
+    Utils.all("/vehicles/")
+  end
 
-    def get_vehicle(id) do
-        {status, res} = Request.fetch("/vehicles/#{id}")
+  def get_species(id) do
+    Utils.one("/species/#{id}/")
+  end
 
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_all_species do
+    Utils.all("/species/")
+  end
 
-    # TODO: Recurse through all pages
-    def get_all_vehicles do
-        {status, res} = Request.fetch("/vehicles")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
+  def get_planet(id) do
+    Utils.one("/planets/#{id}/")
+  end
 
-    def get_species(id) do
-        {status, res} = Request.fetch("/species/#{id}")
-
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
-
-    # TODO: Recurse through all pages
-    def get_all_species do
-        {status, res} = Request.fetch("/species")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
-
-    def get_planet(id) do
-        {status, res} = Request.fetch("/planets/#{id}")
-
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
-
-    # TODO: Recurse through all pages
-    def get_all_planets do
-        {status, res} = Request.fetch("/planets")
-        
-        case {status, res} do 
-            {:ok, res} -> res
-            {:err, err} -> err
-        end
-    end
-
+  # TODO: Recurse through all pages
+  def get_all_planets do
+    Utils.all("/planets/")
+  end
 end

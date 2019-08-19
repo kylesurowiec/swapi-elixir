@@ -43,7 +43,6 @@ defmodule Swapi do
     Request.one("/planets/#{id}/")
   end
 
-  # TODO: Recurse through all pages
   def get_all_planets do
     Request.all("/planets/")
   end

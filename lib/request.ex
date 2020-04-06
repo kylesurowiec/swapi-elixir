@@ -12,7 +12,7 @@ defmodule Request do
 
     case {response.status, response} do
       {200, res} -> {:ok, res.body}
-      {_, res} -> {:err, "Invalid reqest: #{res.status} | #{res.url}"}
+      {_, res} -> {:err, "Invalid request: #{res.status} | #{res.url}"}
     end
   end
 
